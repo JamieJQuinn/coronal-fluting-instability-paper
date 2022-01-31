@@ -1,7 +1,7 @@
 \documentclass[fleqn,usenatbib]{mnras}
 
-\usepackage{newtxtext,newtxmath}
-\usepackage[T1]{fontenc} % modern encoding
+%\usepackage{newtxtext,newtxmath}
+%\usepackage[T1]{fontenc} % modern encoding
 
 \usepackage{graphicx}	% Including figure files
 \usepackage{amsmath}	% Advanced maths commands
@@ -41,6 +41,8 @@
 
 \newcommand{\rs}[2]{{#2}}
 \newcommand{\jq}[2]{{#2}}
+
+\newcommand{\rev}[1]{{\color{red} #1}}
 
 % Make tensors and vectors bold
 \newcommand{\ten}[1]{{\bm #1}}
@@ -118,7 +120,7 @@ Given its energetic nonlinear development, it is considered a potential
 mechanism for heating the solar corona through the theory of
 nanoflares~\citep{klimchukSolvingCoronalHeating2006,browningMechanismsSolarCoronal1991}
 and a key mechanism in the production of solar
-flares~\citep{hoodKinkInstabilitySolar1979}. Some of our previous work has
+flares~\citep{hoodKinkInstabilitySolar1979}. \rev{Some of our previous work} has
 investigated a twisted magnetic flux tube already linearly unstable to the
 helical kink instability, focussing specifically on the effect of anisotropic
 viscosity on the nonlinear
@@ -220,7 +222,23 @@ heating the plasma, viscosity plays a part in the damping of instabilities and
 waves~\citep{rudermanSlowSurfaceWave2000}. It is this effect we are most
 interested in here, and it shall be reported that the use of anisotropic
 viscosity permits the growth of the flute instability, which is otherwise
-strongly damped by isotropic viscosity. 
+strongly damped by isotropic viscosity.
+
+\rev{It will be shown in our results that the flute instability is driven by
+a pressure gradient generated through Ohmic heating, so the value of
+resistivity is an important parameter in the development of the instability. In
+addition to exploring the effect of viscosity model on the flute instability,
+we also explore the effect of varying resistivity. Ideally, our simulations
+would be performed using a realistic coronal resistivity of approximately
+$10^{-8}$~\citep{craigAnisotropicViscousDissipation2009a} however due to the
+dissipative nature of numerical schemes (particularly when using shock
+capturing techniques) this is computationally infeasible. In order to provide
+some sense of the scaling expected with resistivity, to allow us to speculate
+about the expected results at coronal values, we perform our simulations at
+two, computationally accessible values of resistivity, $10^{-3}$ and $10^{-4}$.
+This is not intended to replace a full parameter study so we will speculate
+whether our results generalise to lower values of resistivity but will not
+attempt to quantify any scaling laws or suggest concrete trends.}
 
 This paper is organised as follows. Section~\ref{sec-flute-intro} introduces
 the flute instability and relevant linear analyses,
@@ -977,6 +995,56 @@ the observed growth rate.
 \section{Discussion}
 \label{sec-discussion}
 
+\rev{Our aim in performing the reported numerical experiments was to explore
+the flute instability in a dynamically twisted coronal flux tube, specifically
+focussing on the effect of anisotropic viscosity on the development of the
+instability. In addition we wish to understand the effect the instability has
+on the proceeding kink instability, the effect on the overall heating generated
+through viscous and Ohmic dissipation, and the effect that varying resistivity
+has on the development of the flute.}
+
+\rev{We have found evidence of the flute instability using both models of
+viscosity, however isotropic viscosity damps the initial growth such that it
+does not develop beyond its linear phase before the faster growing kink
+instability disrupts the flux tube and halts the development of the flute.
+Given that most numerical studies of the kink instability employ isotropic or
+shock viscosity, this is likely why the flute instability has not been
+previously reported.
+
+The growth rate of the kink instability is, counter-intuitively, lower in the
+weakly dissipative anisotropic cases, compared to the strongly dissipative
+isotropic cases, i.e. one would expect the kink instability to grow more
+quickly (or at least be unaffected) when using anisotropic viscosity. Indeed,
+the simulations reported in~\citet{quinnEffectAnisotropicViscosity2020} display
+this behaviour, where the kink instability grows (marginally) faster in the
+anisotropic cases. We conjecture it is the presence of the flute modes which
+negatively affects the growth of the kink instability. It seems unlikely that
+in the linear regime the perturbations of the flute and kink are able to
+directly couple, given that the kink instability generally presents at the axis
+of a flux tube and the flute at some resonant surface away from the axis.
+Instead of a linear coupling, we believe that the linear kink instability is
+disturbed by the more complex magnetic field configuration that arises due to
+the mixing caused by the nonlinear development of the flute modes. The
+complexity in the field can be seen by comparing
+figures~\ref{fig:field_line_plots_iso} and~\ref{fig:field_line_plots_swi}).
+
+Beyond the effect on the growth of the two observed instabilities, the two
+viscosity models greatly affect both the viscous heating and Ohmic heating
+rates. Anisotropic viscosity is naturally less dissipative than isotropic
+viscosity and generates approximately two orders of magnitude less total
+viscous heat than isotropic viscosity. This is somewhat offset by anisotropic
+viscosity permitting greater kinetic energy release and enhanced mixing, which
+in turn enhances Ohmic dissipation of heat through the generation of small,
+strong current sheets. The overall effect is that more heat is generated when
+the viscosity is anisotropic, similar to what has been observed in previous
+work~\citep{quinnEffectAnisotropicViscosity2020}. In the context of
+coronal heating, this is encouraging: the use of a less dissipative viscosity
+model actually results in greater overall heating. How this result generalises
+to more realistic coronal resistivities, and whether this result holds true for
+other coronal instabilities, should be the subject of further investigation.}
+
+\rev{Since the flute instability only develops nonlinearly when using anisotropic viscosity, it is difficult to distinguish the effect of the instability from that of the viscosity itself on the viscous or Ohmic heating. TODO}
+
 It is likely that the $m=4$ azimuthal perturbation is excited due to influences
 from the boundaries in the Cartesian box, for example through the interaction
 of reflected fast waves generated in part by the driver. Performing a similar
@@ -996,15 +1064,9 @@ instability, the tube is initially perturbed with a motion close to an unstable
 eigenmode of the kink instability, resulting in the instability growing from
 $t=0$. In contrast, in the tubes studied here, such a perturbation must build
 from numerical noise, allowing a secondary, fluting perturbation to also build
-and become significant enough to observe.
-
-Our set of numerical experiments has shown that the mixing as a result of the
-nonlinear flute instability appears to slow the growth of the kink instability.
-It seems unlikely that in the linear regime the perturbations of the flute and
-kink are able to directly couple, given that the kink instability generally
-presents at the axis of a flux tube and the flute at some resonant surface away
-from the axis. Further investigation of the nonlinear interaction between the
-two instabilities is required. 
+and become significant enough to observe. \rev{As an explorative alternative to
+prescriptive perturbations, we recommend the use of numerical noise in the
+study of coronal instabilities.}
 
 Since the main driver of the flute instability is the pressure gradient
 generated through Ohmic heating, it is prudent to ask if the same pressure
@@ -1068,14 +1130,6 @@ magnetic energy. The overall effect of this mixing is to slow the growth of the
 kink instability. The slowed growth of the kink does not appear to
 significantly impact the kinetic energy released during its evolution, only the
 time over which it is released. 
-
-The form of viscosity has been found to significantly affect the growth of the
-flute instability. Importantly, isotropic viscosity is found to damp the growth
-of the flute instability to the degree that it is unable to grow appreciably
-before the onset of the faster growing nonlinear kink instability. Overall, the
-anisotropic model permits greater release of kinetic energy. Similar to~\citet{quinnEffectAnisotropicViscosity2020}, isotropic viscous heating is found
-to be lower than anisotropic (switching) viscous heating, by approximately two
-orders of magnitude. 
 
 These numerical experiments have provided evidence that the flute instability
 can occur in twisted magnetic flux ropes and grow at similar rates to the kink

@@ -22,5 +22,5 @@ clean:
 	rm -rf $(BUILD_FOLDER)
 	rm -f $(OUTPUT_NAME).pdf
 
-#fetch-images:
-	#rsync -avz maths-hop:~/thesis/images .
+fetch-images:
+	rsync -avz myriad:/home/cceajqu/projects/fluting/coronal-fluting-instability-analysis/kink_instability_from_straight/\*.pdf images/kink_instability_straight

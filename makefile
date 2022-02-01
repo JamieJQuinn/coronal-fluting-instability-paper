@@ -20,6 +20,7 @@ $(BUILD_FOLDER):
 .PHONY: clean
 clean:
 	rm -rf $(BUILD_FOLDER)
+	rm $(OUTPUT_NAME).bbl
 	rm -f $(OUTPUT_NAME).pdf
 
 fetch-images:

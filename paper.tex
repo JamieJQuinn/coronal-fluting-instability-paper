@@ -530,7 +530,7 @@ prescribed.
   \end{subfigure}
   \mycaption{Radial velocity profile $u_r(r)$ and acceleration profile
     $u_t(t)$ of the driver \eqref{eq:null_twisting_profile} for
-    parameters $u_0 = 0.15$, $r_d = 5$ and $t_r = 2$.}{} 
+    parameters $u_0 = 0.15$, $r_d = 5$ and $t_r = 2$.}{}
   \label{fig:kink_driver}
 \end{figure}
 
@@ -586,25 +586,31 @@ the current work is  $512$ grid points per dimension, comparable to the highest
 resolution kink instability studies of~\cite{hoodCoronalHeatingMagnetic2009} or
 medium resolution studies of~\cite{barefordShockHeatingNumerical2015}. 
 
-\begin{figure}
+\begin{figure*}
   \centering
-    \begin{subfigure}{0.49\textwidth}
+    \begin{subfigure}{0.32\textwidth}
       \includegraphics[width=\linewidth]{kinetic_energy-4.pdf}
       \caption{Kinetic Energy}
       \label{fig:kink_ke-4}
     \end{subfigure}
     \hfill
-    \begin{subfigure}{0.49\textwidth}
+    \begin{subfigure}{0.32\textwidth}
       \includegraphics[width=\linewidth]{kinetic_energy_log-4.pdf}
       \caption{Growth rate estimation}
       \label{fig:kink_ke_log-4}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.32\textwidth}
+      \includegraphics[width=\linewidth]{heating_r-4.pdf}
+      \caption{Internal energy, with viscous and Ohmic heating}
+      \label{fig:heating-4}
     \end{subfigure}
   \mycaption{Kinetic energy as a function of time showing the development and
   measured growth rates $\gamma$ and $\lambda$ of the flute and kink
   instabilities, respectively.}{Resistivity is $\eta=10^{-4}$ and the second
   plot is a enlarged version of the first.}
 \label{fig:kink_str8_ke-4}%
-\end{figure}
+\end{figure*}
 
 \section{Results}
 \label{sec-results}
@@ -787,26 +793,6 @@ instability. In the isotropic case the
 \rev{growth of the flute instability is damped relative to the anisotropic case}
 to the extent that the kink instability grows uninhibited and quickly disrupts the
 fluting. 
-
-% \begin{figure}
-%   \centering
-%     \begin{subfigure}{0.49\textwidth}
-%       \includegraphics[width=\linewidth]{kinetic_energy-4.pdf}
-%       \caption{Kinetic Energy}
-%       \label{fig:kink_ke-4}
-%     \end{subfigure}
-%     \hfill
-%     \begin{subfigure}{0.49\textwidth}
-%       \includegraphics[width=\linewidth]{kinetic_energy_log-4.pdf}
-%       \caption{Growth rate estimation}
-%       \label{fig:kink_ke_log-4}
-%     \end{subfigure}
-%   \mycaption{Kinetic energy as a function of time showing the development and
-%   measured growth rates $\gamma$ and $\lambda$ of the flute and kink
-%   instabilities, respectively.}{Resistivity is $\eta=10^{-4}$ and the second
-%   plot is a enlarged version of the first.}
-% \label{fig:kink_str8_ke-4}%
-% \end{figure}
 
 Despite the flute instability appearing in the isotropic case
 (Figure~\ref{fig:field_line_plots_iso}), only in the anisotropic case can the
@@ -1000,25 +986,31 @@ slowly as it moves the axis of the tube through the mixed region to eventually
 begin the reconnection process with the outer region of field that is typical
 of the instability in this kind of flux tube as was observed by \revcite{\citet{quinnEffectAnisotropicViscosity2020}}. 
 
-\begin{figure}
+\begin{figure*}
   \centering
-    \begin{subfigure}{0.49\textwidth}
+    \begin{subfigure}{0.32\textwidth}
       \includegraphics[width=\linewidth]{kinetic_energy-3.pdf}
       \caption{Kinetic Energy}
       \label{fig:kink_ke-3}
     \end{subfigure}
     \hfill
-    \begin{subfigure}{0.49\textwidth}
+    \begin{subfigure}{0.32\textwidth}
       \includegraphics[width=\linewidth]{kinetic_energy_log-3.pdf}
       \caption{Growth rate estimation}
       \label{fig:kink_ke_log-3}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.32\textwidth}
+      \includegraphics[width=\linewidth]{heating_r-3.pdf}
+      \caption{Cumulative heat}
+      \label{fig:heating_r-3}
     \end{subfigure}
 \mycaption{Kinetic energy as a function of time in the cases where
 $\eta=10^{-3}$.}{The results from both viscosity models are shown. The flute
 instability appears earlier than where $\eta=10^{-4}$ and the growth rate of
 the kink instability is decreased.}
 \label{fig:kink_str8_ke-3}%
-\end{figure}
+\end{figure*}
 
 It is evident from the kinetic energy profile that the flute instability
 develops much earlier than in the $\eta=10^{-4}$ cases and grows at an

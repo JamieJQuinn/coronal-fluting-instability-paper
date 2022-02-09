@@ -1024,10 +1024,10 @@ of the instability in this kind of flux tube as was observed by \revcite{\citet{
       \caption{Cumulative heat}
       \label{fig:heating_r-3}
     \end{subfigure}
-\mycaption{Kinetic energy as a function of time in the cases where
+\mycaption{Kinetic energy \rev{and heating} as a function of time in the cases where
 $\eta=10^{-3}$.}{The results from both viscosity models are shown. The flute
 instability appears earlier than where $\eta=10^{-4}$ and the growth rate of
-the kink instability is decreased.}
+the kink instability is decreased. \rev{While the heat generated via viscous heating is orders of magnitude lower when using anisotropic viscosity, Ohmic heating is enhanced by the use of the anisotropic model.}}
 \label{fig:kink_str8_ke-3}%
 \end{figure*}
 
@@ -1073,11 +1073,6 @@ Theoretical average ideal linear growth rate of flute $\gamma$
 & \rev{0.88} 
 & 1.73 
 & \rev{1.73} \\
-\rev{Theoretical average resistive linear growth rate of flute $\gamma_r$}
-& 0.35 
-& 0.33
-& 1.26 
-& 1.25 \\
 Observed growth rate of flute $\gamma$
 & 0.69 
 & \rev{--} 
@@ -1094,27 +1089,22 @@ Theoretical radius $r_s$ of peak ideal flute growth rate
 & \rev{0.125} 
 & 0.163 
 & \rev{1.63}\\
-\rev{Theoretical radius $\tilde{r}_s$ of peak resistive flute growth rate}
-& 0.125 
-& 0.125 
-& 0.148 
-& 0.140\\
-Observed radius $r_s$ of peak flute growth rate
-& 0.125 
-& \rev{--} 
-& 0.163 
-& \rev{??}\\
 \midrule
+\rev{Predicted axial wave number $k_{\text{flute}}$}
+& 23.74
+& 23.52
+& 17.15
+& 17.60\\
 Observed axial wave number $k_{\text{flute}}$
-& 23.61 
-& \rev{--} 
-& 16.05 
-& \rev{??} \\
+& \rev{22.67 \pm 1}
+& \rev{22.71 \pm 1}
+& \rev{16.12 \pm 0.4}
+& \rev{16.25 \pm 0.4}\\
 Observed axial wave number $k_{\text{kink}}$
-& \rev{??} 
-& 4.57 
-& \rev{??} 
-& 4.53\\
+& \rev{4.57}
+& \rev{4.41}
+& \rev{3.44}
+& \rev{3.49}\\
 \midrule
 \rev{Cumulative viscous heat at $t=50$}
 & $1.64 \times 10^{-2}$ 
@@ -1131,16 +1121,22 @@ Observed axial wave number $k_{\text{kink}}$
 \end{table*}
 
 Table~\ref{tab:kink_fluting_params} summarises the quantitative differences
-between the results for the two values of the resistivity $\eta$. All values
-are calculated from simulations using the anisotropic model with the exception
-of $k_{\text{kink}}$ which is measured from isotropic results due to noise in
-the anisotropic case (the value of $k_{\text{kink}}$ appears similar, however).
-The results of the isotropic cases are qualitatively similar. The radius of
-peak \rev{linear flute growth rate $r_s$} is calculated at time $t=20$. The fluting wavenumber $k$ and
-observed $r_s$ are measured at times just prior to the nonlinear development of
-the flute instability, that is at $t=22$ when $\eta=10^{-3}$ and $t=26$ when
-$\eta = 10^{-4}$. The kink wavenumber is measured at $t=26$ in both cases.
-These times allow fair comparison between measurements.
+between the results for the two values of the resistivity $\eta$. \rev{The mean
+across the radius of the ideal estimate of the growth
+rate~\eqref{eq:fluting_growth_rate2} provides the theoretical average growth
+rate, while the location of the peak growth rate provides a prediction of where
+the instability will initially grow. This peak is used in conjunction with the
+resonance equation~\eqref{eq:resonant_surface} (with $m=4$) to predict the most
+unstable axial wavenumber.} The observed fluting wavenumbers are measured at
+times just prior to the nonlinear development of the flute instability, that is
+at $t=22$ when $\eta=10^{-3}$ and $t=26$ when $\eta = 10^{-4}$. The kink
+wavenumber is measured at $t=26$ in both cases. These times allow fair
+comparison between measurements. Also listed are estimates for the cumulative
+heat generated via viscous and Ohmic heating during the simulation time. As is
+also found in previous studies of viscous heating in kink
+instabilities~\citep{quinnEffectAnisotropicViscosity2020}, anisotropic viscous
+heating is approximately two orders of magnitude lower than isotropic and the
+use of anisotropic viscosity enhances Ohmic heating.
 
 The longitudinal wavenumber $k_{\text{kink}}$ of the observed kink perturbation
 remains similar in both cases since the instability is essentially governed by

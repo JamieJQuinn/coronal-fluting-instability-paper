@@ -251,11 +251,11 @@ resistivity values of approximately
 $10^{-8}$~\citep{craigAnisotropicViscousDissipation2009a}, however, due
 to the dissipative nature of numerical schemes (particularly when using shock
 capturing techniques) this is computationally infeasible.
-To overcome this limitation and to attempt to extrapolate results
-towards more realistic values, we perform and compare simulations at 
-two, computationally accessible, resistivity values, $10^{-3}$ and
-$10^{-4}$. This comparison runs as an additional theme of the paper,
-even if not quite a primary aim.}
+To overcome this limitation, we perform and compare simulations at two computationally
+accessible resistivity values, $10^{-3}$ and $10^{-4}$,
+in an attempt to extrapolate results towards more realistic values.
+This comparison runs as an additional theme of the paper,
+if not a primary aim.}
 % To overcome this limitation, we perform and compare simulations at
 % two, computationally accessible, values of resistivity, $10^{-3}$ and
 % $10^{-4}$, and this comparison runs as an additional theme of the paper.
@@ -1055,12 +1055,12 @@ text.} JAMIE, PLEASE CHECK VALUES IN RED [rs]} Quantitative differences in the o
 $\eta$. Measurements times are listed in the main text.} 
 \centering
 \begin{tabular}{ccccc}
-&\multicolumn{2}{c}{\rev{$\eta=10^{-4}$}}& \multicolumn{2}{c}{\rev{$\eta=10^{-3}$}} \\
+&\multicolumn{2}{c}{$\eta=10^{-4}$}& \multicolumn{2}{c}{$\eta=10^{-3}$} \\
 &
 Anisotropic &
-Isotropic &
+\rev{Isotropic} &
 Anisotropic &
-Isotropic \\
+\rev{Isotropic} \\
 \midrule
 Theoretical average ideal linear growth rate of flute $\gamma$
 & 0.88 
@@ -1083,33 +1083,38 @@ Theoretical radius $r_s$ of peak ideal flute growth rate
 & \rev{0.125} 
 & 0.163 
 & \rev{1.63}\\
+\todo{WHY WAS ROW REMOVED?} Observed radius $r_s$ of peak ideal flute growth rate
+& 0.125 
+& \rev{0.125} 
+& 0.163 
+& \rev{1.63}\\
 \midrule
 \rev{Predicted axial wave number $k_{\text{flute}}$}
-& 23.74
-& 23.52
-& 17.15
-& 17.60\\
+& \rev{23.74}
+& \rev{23.52}
+& \rev{17.15}
+& \rev{17.60}\\
 Observed axial wave number $k_{\text{flute}}$
-& \rev{$22.67 \pm 1$}
+& $22.67 \pm 1$
 & \rev{$22.71 \pm 1$}
-& \rev{$16.12 \pm 0.4$}
+& $16.12 \pm 0.4$
 & \rev{$16.25 \pm 0.4$}\\
 Observed axial wave number $k_{\text{kink}}$
-& \rev{4.57}
+& {4.57}
 & \rev{4.41}
-& \rev{3.44}
+& {3.44}
 & \rev{3.49}\\
 \midrule
 \rev{Cumulative viscous heat at $t=50$}
-& $1.64 \times 10^{-2}$ 
-& 1.28 
-& $2.89 \times 10^{-3}$ 
-& 0.370 \\
+& \rev{$1.64 \times 10^{-2}$}
+& \rev{1.28}
+& \rev{$2.89 \times 10^{-3}$}
+& \rev{0.370} \\
 \rev{Cumulative Ohmic heat at $t=50$}
-& 3.06 
-& 2.75 
-& 6.54 
-& 6.27 \\
+& \rev{3.06}
+& \rev{2.75} 
+& \rev{6.54} 
+& \rev{6.27} \\
 \end{tabular}
 \label{tab:kink_fluting_params}
 \end{table*}

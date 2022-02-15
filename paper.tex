@@ -243,9 +243,9 @@ interested in here, and it shall be reported that the use of anisotropic
 viscosity permits the \rev{growth} of the flute instability, which is otherwise
 strongly damped by isotropic viscosity.
 
-\rev{The value of plasma resistivity strongly affects the development of
-the flute instability because pressure gradients generated through
-Ohmic heating substantially contribute to its growth.
+\rev{The value of plasma resistivity also affects the
+development of the flute instability because pressure gradients
+generated through Ohmic heating substantially contribute to its growth.
 Ideally, our simulations would be performed using a realistic coronal
 resistivity values of approximately
 $10^{-8}$~\citep{craigAnisotropicViscousDissipation2009a}, however, due
@@ -314,7 +314,7 @@ a surface where the peaks and troughs follow the shear of the field. That is,
 the instability is confined to the surface where the perturbation wavevector
 $(0, m/r, k)$ is perpendicular to the direction of the field, known as the
 ``resonance surface''. In an axisymmetric twisted flux tube the resonance
-surface is located at a radius $r$ given by
+surface is located at a radius $r$ specified by
 \begin{equation}
   \label{eq:resonant_surface}
 \frac{m}{r} B_{\theta}(r) + kB_z(r) \approx 0.
@@ -344,11 +344,14 @@ enough that interchange perturbations do not need to
 satisfy~\eqref{eq:resonant_surface}. Additionally, the inclusion of resistivity
 generally reduces the stabilising effect of the shear, permitting growth of
 a resistive interchange mode, albeit at a significantly slower rate than that of the ideal
-instability (See, for example~\citet{mikhailovskiiInstabilitiesConfinedPlasma1998}). \rev{At the values of resistivity studied here, the resistive growth rate is approximately two orders of magnitude less than the corresponding ideal rate.} Additionally, it will be
+instability
+\citep{mikhailovskiiInstabilitiesConfinedPlasma1998}. \rev{At the
+  values of resistivity studied here, the resistive growth rate is
+  expected to be approximately two orders of magnitude less than the corresponding ideal rate.} Furthermore, it will be
 found that the ideal linear analysis
 of~\cite{mikhailovskiiInstabilitiesConfinedPlasma1998} is sufficient for
 understanding the flute instabilities investigated here since the associated
-flux tubes adequately fail the criterion~\eqref{eq:suydams_criterion}. \rev{For these reasons, we consider only the ideal flute instability.}
+flux tubes substantially fail the criterion~\eqref{eq:suydams_criterion}. \rev{For these reasons, we consider only the ideal flute instability.}
 
 While Suydam's condition gives an indication of the stability of a flux tube to
 a given perturbation, the linear growth rate of the ideal flute instability
@@ -368,7 +371,7 @@ of the plasma, the growth rate $\lambda$ tends to the limit}
 \gamma^2 = \frac{2|\nabla p|}{\rho R_c},
 \end{equation}
 where $R_c$ is the radius of curvature of the magnetic field.
-\rev{We report further below that this expression gives a good
+\rev{We find that this expression gives a good
   estimate of the growth rate of the flute instability in our
   numerical simulations even at moderate values of $m$.} 
 Equation \eqref{eq:fluting_growth_rate}
@@ -486,7 +489,8 @@ are not significantly large.
 The non-dimensionalisation of equations \eqref{eq:MHD} is identical to that
 used in the earlier
 works by \revcite{\citet{quinnEffectAnisotropicViscosity2020,quinnKelvinHelmholtzInstabilityCollapse2021}}
-\rev{\sout{and in reference (Arber... , see further below}}.
+\rev{\sout{and in reference (Arber et al. 2001) that describes the code Lare3d we use
+for numerical solution, see further below}}.
 A typical magnetic field strength $B_0$, density $\rho_0$ and length scale
 $L_0$ are chosen and the other variables non-dimensionalised appropriately.
 Velocity and time are non-dimensionalised using the Alfv\'en speed $u_A = B_0
@@ -609,17 +613,31 @@ medium resolution studies of~\cite{barefordShockHeatingNumerical2015}.
       \caption{Cumulative heating}
       \label{fig:heating-4}
     \end{subfigure}
-  \mycaption{Kinetic energy \rev{and heating} as a function of time showing the development and
+  \mycaption{Kinetic energy (a,b) \rev{and cumulative heating (c)} as a function of time showing the development and
   measured growth rates $\gamma$ and $\lambda$ of the flute and kink
-  instabilities, respectively.}{Resistivity is $\eta=10^{-4}$ and Figure~\ref{fig:kink_ke_log-4} is a enlarged version of the first. \rev{The cumulative heating $\langle Q_{*} \rangle$ where $*$ is either $\nu$ for viscous heating or $\eta$ for Ohmic heating is the total heat integrated over both time and space up to a time $t$. The viscous heating associated with the flute instability (that generated before $t\approx28$) is negligible compared to that associated with the kink instability. While the isotropic model permits greater viscous heating (on the order of two orders of magnitude), the anisotropic model enhances Ohmic heating.}}
+  instabilities, respectively.}{Resistivity value is $\eta=10^{-4}$
+    and Figure~\ref{fig:kink_ke_log-4} is an enlarged version of
+    Figure~\ref{fig:kink_ke-4}. \rev{The cumulative heating $\langle
+      Q_{*} \rangle$, where $*$ is either $\nu$ for viscous heating or
+      $\eta$ for Ohmic heating, is the respective heating term  
+      integrated both over space and from the initial moment up to the moment $t$ in
+      time. The viscous heating associated with the flute instability
+      (that generated before $t\approx28$) is negligible compared to
+      that associated with the kink instability (generated after
+      $t\approx28$). While the isotropic 
+      model permits greater viscous heating (on the order of two
+      orders of magnitude), the anisotropic model enhances Ohmic
+      heating.   \todo{[In 2c correct $\langle Q_{\eta} \rangle$ --
+        should be LANGLE INSTEAD OF LESS SIGN]}}} 
 \label{fig:kink_str8_ke-4}%
 \end{figure*}
 
 \section{Results}
 \label{sec-results}
 
-We focus the attention on two selected pairs of  simulations, one pair where
-the background resistivity is set to $\eta=10^{-3}$ and another where
+\rev{In an attempt to extrapolate to coronal resistivity values,} we
+focus the attention on two selected pairs of  simulations, one pair
+where the background resistivity is set to $\eta=10^{-3}$ and another where
 $\eta=10^{-4}$. As in the work of ~\revcite{\citet{quinnEffectAnisotropicViscosity2020}}, only
 background resistivity is used. Each pair consists of one simulation using
 isotropic viscosity~\eqref{eq:isotropic_viscous_tensor} and another one using
@@ -629,7 +647,7 @@ to $\nu = 10^{-4}$ in all cases.
 The overall development of both the flute and the kink instabilities is broadly
 similar for the two values of resistivity and is described  initially. Similar
 simulations were performed with a longer flux tube of length $20$ instead of
-the tubes shown here with length $4$, and the results were found to be
+the tubes with length $4$ shown here, and the results were found to be
 qualitatively similar. Focus is then placed on the detailed description of
 instabilities in the $\eta=10^{-4}$ cases, with the aim of comparing the
 effects of the two viscosity models. Then further features of the
@@ -758,8 +776,8 @@ nonlinear kink development, the tube continues to release its stored potential
 energy in the form of kinetic energy and heat and the contained plasma becomes
 highly mixed. In the  isotropic viscosity case which will not be illustrated by
 a separate figure, the flute instability is present but \rev{its
- growth is damped relative to the anisotropic case}, and it is 
-outcompeted by the kink instability which quickly dominates the dynamics. 
+ growth is damped relative to the anisotropic case}, and it is quickly
+outcompeted by the kink instability which  dominates the dynamics. 
 
 \begin{figure}
   \centering
@@ -787,24 +805,23 @@ lines of the isotropic case in subfigure~\ref{fig:field_line_plots_iso}.}
 
 Figure~\ref{fig:kink_field_line_plots} shows the effect the viscosity models
 have on the initial stages of the flute and kink instabilities in 3D. While the
-flute instability is observed in both cases, \rev{its growth is  damped} in the
-isotropic case and grows faster in the anisotropic case. In the latter case,
-the extended development of the flute instability appears to disrupt the inner
+flute instability is observed in both cases, \rev{it is more
+  pronounced in the anisotropic case, where it} appears to disrupt the inner
 core of field lines and, as will be discussed further below, slows the growth
 of the kink instability. In the isotropic case the \rev{growth of the flute
 instability is damped relative to the anisotropic case} to the extent that the
 kink instability grows uninhibited and quickly disrupts the fluting. 
 
 Despite the flute instability appearing in the isotropic case
-(Figure~\ref{fig:field_line_plots_iso}), only in the anisotropic case can the
-onset of both the flute and kink instabilities be seen in the kinetic energy
-profile shown in Figure~\ref{fig:kink_ke_log-4}. Here, the growth
+(Figure~\ref{fig:field_line_plots_iso}), only in the anisotropic case
+can \rev{phases of linear growth of} the flute and kink instabilities be seen in the kinetic energy
+profile as shown in Figure~\ref{fig:kink_ke_log-4}. Here, the growth
 rates of the two instabilities are found to be $\gamma = 0.69$ for the flute
-and $\lambda = 2.55$ for the kink. The onset times are approximately $t=27$ for
+and $\lambda = 2.55$ for the kink. \rev{The apparent phases of linear
+growth as measured from the kinetic energy time series, start} at approximately $t=27$ for
 the flute instability and $t=29.5$ for the kink. In the isotropic case, the
 growth rate of the kink, $\lambda = 2.97$, is larger than in the anisotropic
-case, although the onset times appear similar, and the kinetic energy profile
-shows no evidence of flute instability growth. 
+case, while the kinetic energy profile shows no evidence of flute instability growth. 
 
 The faster growth of the kink compared to that measured by~\revcite{\citet{quinnEffectAnisotropicViscosity2020}} is attributed to the relative
 aspect ratios of the flux tubes. The tube prescribed by~\revcite{\citet{quinnEffectAnisotropicViscosity2020}} has an aspect ratio of
@@ -849,12 +866,13 @@ fluting growth rate $\gamma$ is plotted as a function of $r$ at
 $t=20$ in Figure~\ref{fig:growth_rate_4}. \rev{At any fixed moment,
 the radial dependence of the flute instability growth rate, $\gamma(r)$, is a concave
 function and peaks at a certain radius that we denote by $r_s$ in
-Figure~\ref{fig:growth_rate_4} and Table~\ref{tab:kink_fluting_params}
-where we compare theoretical and numerical estimates.}
+Figure~\ref{fig:growth_rate_4} and Table~\ref{tab:kink_fluting_params}.}
 
-The location of the peak \rev{fluting growth rate $r_s$} aligns well with the location of the resonant surface where the observed perturbation appears to grow
+The location \rev{$r_s$} of the peak \rev{fluting growth rate} aligns
+well with the location of the resonant surface where the observed
+perturbation appears to grow 
 (Figure~\ref{fig:swi-4_pressure_13}) and an estimate of the linear growth rate
-can be found by averaging $\gamma$ over $r$, giving a growth rate of $0.86$.
+can be found by averaging $\gamma$ over $r$, giving a theoretical growth rate of $0.88$.
 
 \begin{figure}
   \centering
@@ -889,7 +907,7 @@ with the largest amplitude. In particular, the} fluting perturbation
   is most easily observed in the pressure \rev{profile and} \rev{\newold{}{ plotted
   as a function of $z$ following a line through the point $(r, \theta) = (0.101, 0)$.}} \rev{the} kink
 instability is best revealed \rev{by either of the $x$- or
-the $y$-component of} velocity which can serve as a proxies for the radial
+the $y$-component of} velocity which can serve as proxies for the radial
 velocity through the axis. Comparing the magnitudes of the \rev{profiles} at
 this time suggests the flute instability is close to transitioning to its
 nonlinear phase while the kink instability is still very much in its linear
@@ -897,19 +915,20 @@ phase.
 
 The value of $k$ for each \rev{instability mode} is calculated as $k
 = 2\pi/\tilde{\lambda}$ where $\tilde{\lambda}$ is the wavelength of the
-perturbation, measured as the difference between the two peaks closest to $z=0$
+perturbation, measured as the difference between the two peaks closest
+to $z=0$ \rev{in Figure~\ref{fig:pressure_pert_4}}
 (thus minimising the influence of line-tying on the measurement). This gives
 a value of $k_{\text{flute}}=22.93$ and $k_{\text{kink}}=4.57$ for the
 anisotropic model and $k_{\text{flute}}=22.30$ and $k_{\text{kink}}=4.41$.
-Using these values, it is observed that the fluting perturbation resonates with
+Using these values, it is observed that the fluting mode resonates with
 the field, that is $m B_{\theta}(r)/r + kB_z(r) \approx 0$, over a range of
 $0.15 \lesssim r \lesssim 0.225$ (Figure~\ref{fig:resonant_surface_4}). This is
 in close agreement with the predicted radius of peak linear \rev{flute growth
 $r_s$} seen in Figure~\ref{fig:growth_rate_4}.
 
-Comparing the effect of the viscous models on the perturbations, \rev{in the
-isotropic case the fluting perturbation is damped}, while in the anisotropic
-case the kink perturbation is diminished, explaining why the flute instability
+Comparing the effect of the viscous models on the modes, \rev{in the
+isotropic case the fluting mode is damped}, while in the anisotropic
+case the kink mode is diminished, explaining why the flute instability
 appears more readily in the anisotropic case (Figure~\ref{fig:kink_ke-4}).
 
 \subsection{Instabilities at resistivity $\eta=10^{-3}$}
@@ -1102,7 +1121,13 @@ between the results for the two values of the resistivity $\eta$ and two models
 of viscosity. \rev{The mean across the radius of the ideal estimate of the
 growth rate~\eqref{eq:fluting_growth_rate2} provides the theoretical average
 growth rate, which is in decent agreement with the observed rate in each case,
-particularly in the more ideal case where $\eta=10^{-4}$. \rev{The discrepancy between predicted and observed growth rates is due to, in part, the growth rate estimate~\eqref{eq:fluting_growth_rate2} being derived under the assumption $m \gg 1$, which is not true for the observed perturbation where $m=4$. Despite this, the predicted growth rate remains of a similar order of magnitude to the observed rate.} The location of the
+particularly in the more ideal case where $\eta=10^{-4}$. \rev{The
+  discrepancy between predicted and observed growth rates is due to,
+  in part, the growth rate estimate~\eqref{eq:fluting_growth_rate2}
+  being derived under the assumption of asymptotically large values of
+  $m \gg 1$, which is not true for the observed perturbation where
+  $m=4$. Despite this, the predicted growth rate remains of a similar
+  order of magnitude to the observed rate.} The location of the 
 peak growth rate provides a prediction of where the instability will initially
 grow. This radius is used in conjunction with the resonance
 equation~\eqref{eq:resonant_surface} (with $m=4$) to predict the axial

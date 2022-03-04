@@ -43,9 +43,9 @@
 \newcommand{\rs}[2]{{#2}}
 \newcommand{\jq}[2]{{#2}}
 
-\newcommand{\rev}[1]{{\color{red} {#1}}}
+\newcommand{\rev}[1]{{{#1}}}
 \newcommand{\newold}[2]{{#1}{}}
-\newcommand{\revcite}[1]{{\color{red} \underline{#1}}}
+\newcommand{\revcite}[1]{{#1}}
 
 % Make tensors and vectors bold
 \newcommand{\ten}[1]{{\bm #1}}
@@ -205,7 +205,7 @@ represent an initial exploration into the nonlinear flute instability in the
 solar corona.
 
 In addition to our main goal, of particular interest here is
-\rev{\sout{also}} the effect of
+the effect of
 anisotropic plasma viscosity, which in the following is found to strongly
 influence the growth of the flute instability. It is well known that viscosity
 in magnetised plasmas (such as those which make up the solar corona) is
@@ -489,8 +489,7 @@ are not significantly large.
 The non-dimensionalisation of equations \eqref{eq:MHD} is identical to that
 used in the earlier
 works by \revcite{\citet{quinnEffectAnisotropicViscosity2020,quinnKelvinHelmholtzInstabilityCollapse2021}}
-\rev{\sout{and in reference (Arber et al. 2001) that describes the code Lare3d we use
-for numerical solution, see further below}}.
+.
 A typical magnetic field strength $B_0$, density $\rho_0$ and length scale
 $L_0$ are chosen and the other variables non-dimensionalised appropriately.
 Velocity and time are non-dimensionalised using the Alfv\'en speed $u_A = B_0
@@ -1055,14 +1054,9 @@ kink instability grows much slower in the $\eta=10^{-3}$ cases.
 
 \begin{table*}
   \caption{
-%\rev{\sout{Quantitative differences in the observed perturbations between results
-%\rev{with} different resistivity values $\eta$. In all measurements the
-%anisotropic viscosity model is used except for $k_\text{kink}$ where the
-%isotropic viscosity model us used. Measurements times are listed in the main
-%text.}}
 Quantitative differences in the observed perturbations between results
 \rev{with} different \rev{viscosity models and} resistivity values
-$\eta$. Measurements times are listed in the main text.}  
+$\eta$. Measurement times are listed in the main text.}  
 \centering
 \begin{tabular}{ccccc}
 &\multicolumn{2}{c}{$\eta=10^{-4}$}& \multicolumn{2}{c}{$\eta=10^{-3}$} \\
